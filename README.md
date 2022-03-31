@@ -1,5 +1,7 @@
-# data2410_potrfolio
+# data2410: Portfolio assgiment 
 
+<p> This project is a portfolio assignment about chatbot in Data network and cloud computing topic at OsloMet university.
+  
 <h5> Run from terminal:
   
 1.	Open terminal (CMD) on the project file.

@@ -1,7 +1,7 @@
 # data2410: Portfolio assgiment 
 
-<h4>Name: </h4> Siem Fitwi
-<h4>Github Repo:</h4> https://github.com/siemff/data2410_potrfolio.git
+<h4>Name: Siem Fitwi </h4> 
+<h4>Github Repo:https://github.com/siemff/data2410_potrfolio.git </h4> 
 
 <p> This project is a portfolio assignment in Data network and cloud computing.
 The goal in this project is to create a communication channel with bots. 

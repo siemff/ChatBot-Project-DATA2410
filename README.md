@@ -1,6 +1,11 @@
 # data2410: Portfolio assgiment 
 
-<p> This project is a portfolio assignment about chatbot in Data network and cloud computing topic at OsloMet university.
+<h4> Name: <p> Siem Fitwi
+h4> Github Repo: <p> https://github.com/siemff/data2410_potrfolio.git
+
+<p> This project is a portfolio assignment in Data network and cloud computing.
+<p> The goal in this project is to create a communication channel with bots. 
+<p> The programing language used in this project is python. 
   
 <h5> Run from terminal:
   

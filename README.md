@@ -1,8 +1,8 @@
 # data2410: Portfolio assgiment 
 
-#####Name: 
+<h4>Name: </h4>
 <p> Siem Fitwi
-##### Github Repo: 
+<h4>Github Repo: </h4>
 <p> https://github.com/siemff/data2410_potrfolio.git
 
 <p> This project is a portfolio assignment in Data network and cloud computing.

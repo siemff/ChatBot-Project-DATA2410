@@ -1,10 +1,9 @@
 #!/usr/bin/env python
-import argparse
-import pickle
 import socket
+import pickle
+import random
 import threading
 import time
-import random
 
 from bots_setup.bots import choose_bot
 from bots_setup.communication import Message
@@ -13,17 +12,18 @@ from bots_setup.communication import Message
 IPADDR = '127.10.10.10'
 PORT = 8080
 ADDRESS = (IPADDR, PORT)
-# Bots name to identify the Client
+
+# Bots name to identify the Clien
 bots = ("Madelen", "Felix", "Marija", "Rateb")
 USERNAME = random.choice(bots)
+
 # Connection:
 # contains messages from host and responses from bots
-RECEIVED_MSGS_FROM_SERVER = []
-RECEIVED_MSGS_FROM_BOTS = []
+get_server_messages = []
+get_bot_responses = []
 
 # functions that recives messages from server as well as bots
 # and makes sure that 4 responses from all clients/bots are recived by creating array
-#
 def msg_fromServer(connection: socket):
     while True:
         try:
@@ -37,14 +37,14 @@ def msg_fromServer(connection: socket):
                     random_usr = Message(sender=USERNAME)  # serialize Usernames into byte stream
                     connection.send(pickle.dumps(random_usr))
                 else:
-                    RECEIVED_MSGS_FROM_SERVER.append(msg)  # appends message from host to be added in the list
+                    get_server_messages.append(msg)  # appends message from host to be added in the list
                     print(f"{msg.sender}: {msg.response}")  # Message from host, suggesting...
             else:
-                RECEIVED_MSGS_FROM_BOTS.append(msg)  # appends replays from bots to be added in list
+                get_bot_responses.append(msg)  # appends replays from bots to be added in list
                 time.sleep(2)  # suspends executaion of the thread for 2s
                 print(f"{msg.sender}: {msg.response}")  # Message from bots
 
-            if len(RECEIVED_MSGS_FROM_BOTS) == 4:  # When all clients have responded the connection ends
+            if len(get_bot_responses) == 4:  # When all clients have responded the connection ends
                 disconnect = Message(sender=USERNAME, response="Bye")
                 connection.send(pickle.dumps(disconnect))
                 break
@@ -57,8 +57,8 @@ def msg_fromServer(connection: socket):
 # which contains the attributes: bot name and response
 def w_msg(connection: socket):
     while True:
-        if len(RECEIVED_MSGS_FROM_SERVER) == 1:
-            msg = choose_bot(USERNAME, RECEIVED_MSGS_FROM_SERVER[0])
+        if len(get_server_messages) == 1:
+            msg = choose_bot(USERNAME, get_server_messages[0])
             pickle_msg = pickle.dumps(msg)
             connection.send(pickle_msg)
             break

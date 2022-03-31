@@ -4,14 +4,15 @@ which will be sent to clients as well as server.
 """
 class Message:
     def __init__(self, sender: None, response=None, action=None, suggestion_type=None):
-        self.sender = sender
-        self.response = response
-        self.action = action
-        self.suggestion_type = suggestion_type
+        self.sender = sender                    #username
+        self.response = response                #communicatoin between
+        self.action = action                    #action from bots
+        self.suggestion_type = suggestion_type  #suggestion from bots
 
     def __str__(self):
         return self.sender, self.response, self.action, self.suggestion_type
 
+## signes a client by name and connection.
 class Client:
     def __init__(self, name=None, address=None, connection=None):
         self.name = name

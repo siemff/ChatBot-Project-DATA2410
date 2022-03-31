@@ -8,7 +8,7 @@ actions = {
     "bad thing": ["steal", "fight"],
 }
 
-#This method takes an action and adds a subject to it
+#This method takes an action from above and adds a subject to it
 def suggestions(action: str):
     subjects = {
         "play": ['football', 'basketball', 'tennis'],
@@ -28,10 +28,10 @@ def suggestions(action: str):
         return action
 
 def my_bot():
-    name = 'Host'
-    suggestion_types = ["sport", "chill", "study", "bad thing"]
-    suggestion = random.choice(suggestion_types)
-    action = random.choice(actions[suggestion])
+    name = 'Host'                                                   # usename
+    suggestion_types = ["sport", "chill", "study", "bad thing"]     # interestes
+    suggestion = random.choice(suggestion_types)                    # sugestion
+    action = random.choice(actions[suggestion])                     #
     print("Host suggested " + suggestion)
     subject = suggestions(action)
     responses = [
@@ -89,7 +89,7 @@ def rateb(response: Message):
     random_response = random.choice(responses)
     return Message(sender=name, response=random_response)
 
-# This methods takes a name and Message object
+# This function takes a name and Message object
 # and returns a bot with the given name.
 
 def choose_bot(name: str, msg: Message):

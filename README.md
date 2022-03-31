@@ -1,4 +1,4 @@
-# data2410: Portfolio assgiment 
+# DATA2410: Portfolio assgiment 
 
 <h4>Name: Siem Fitwi </h4> 
 <h4>Github Repo: https://github.com/siemff/data2410_potrfolio.git </h4> 

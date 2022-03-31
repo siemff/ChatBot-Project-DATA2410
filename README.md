@@ -5,7 +5,7 @@
 
 <p> This project is a portfolio assignment in Data network and cloud computing.
 The goal in this project is to create a communication channel with bots. 
-The programing language used in this project is python. 
+The programing language used in is python. 
   
 <h5> Run from terminal:
   

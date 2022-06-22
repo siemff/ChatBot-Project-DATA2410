@@ -1,4 +1,4 @@
-# DATA2410: Chatbot project
+# DATA2410: Chatbot project (Socket Bots)
 
 <h4>Name: Siem Fitwi </h4> 
 <h4>Topic: Data network and cloud computing</h4> 
